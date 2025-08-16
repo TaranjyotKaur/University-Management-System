@@ -1,5 +1,7 @@
 show databases;
 
+create database universitymanagementsystem;
+
 use universitymanagementsystem;
 
 select * from student;
@@ -130,3 +132,4 @@ create table collegefee(
     branch varchar(20),
     semester varchar(20),
     total varchar(20));
+
