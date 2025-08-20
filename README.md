@@ -1,1 +1,31 @@
-University Management Software is a cutting-edge ERP software that leads to the automation of most of the tasks that cover the functionalities of all stakeholders of the university including students, teachers, and administrative staff. It streamlines the entire academic journey of the student, starting from inquiry to alumni management. As the university is a repository of the huge amount of data, there is an exclusive need for a university information management system to manage, store, and process this data in the best-optimized way. The software will be the backbone of your university that will take an integrated and modular approach to facilitate the needs of next-generation.<img width="14015" height="90" alt="image" src="https://github.com/user-attachments/assets/4852414e-a5b9-4f7a-8a8f-7db876f4ca1f" />
+# 🎓 University Management System
+
+A Java-based University Management System with secure login functionality for Admin, Teacher and Student roles.  
+This project integrates MySQL for data persistence and uses BCrypt for secure password hashing.
+
+---
+
+ Features
+- Secure Login System with BCrypt password hashing  
+- Role-based authentication: Admin Teacher Student  
+- Login attempt limit (max 5 tries, then account locks)  
+- Centralized database with MySQL  
+- GUI-based (Swing) login and management panels  
+
+---
+
+Technologies Used
+- Java 17+  
+- Swing (GUI)  
+- MySQL 8+  
+- JDBC (database connectivity)  
+- BCrypt (password hashing via `jBCrypt` library)  
+
+---
+
+ Setup Instructions
+
+ 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/university-management-system.git
+cd university-management-system
