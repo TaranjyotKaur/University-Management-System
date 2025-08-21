@@ -9,7 +9,7 @@ public class Conn {
         + "?useSSL=true&requireSSL=false&verifyServerCertificate=false"
         + "&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "tauras4025"; // TODO: set
+    private static final String PASS = "yourpassword"; // TODO: set
 
     public Connection c;
     public Statement s;
