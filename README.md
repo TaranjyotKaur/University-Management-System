@@ -6,7 +6,7 @@ This repository contains two versions of the **University Management System** pr
 
 ## 📌 Branches
 
-### 1. `main` branch
+### 1. `main` branch 
 - Contains the **original project** without security updates.
 - Use this branch if you want the base version of the system.
 
