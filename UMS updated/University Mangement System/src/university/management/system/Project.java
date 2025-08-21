@@ -3,6 +3,8 @@ package university.management.system;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
+import java.awt.image.BufferedImage;
 
 public class Project extends JFrame implements ActionListener {
     private final String role;
@@ -58,10 +60,18 @@ public class Project extends JFrame implements ActionListener {
         mb.add(studentMenu); mb.add(teacherMenu); mb.add(feeMenu); mb.add(exitMenu);
         setJMenuBar(mb);
 
-        // Simple background + welcome
-        JLabel welcome = new JLabel("Welcome, " + role, SwingConstants.CENTER);
-        welcome.setFont(new Font("Arial", Font.BOLD, 28));
-        add(welcome);
+        // ✅ Safe background image load
+        URL bgUrl = ClassLoader.getSystemResource("icons/dashboard.jpg");
+        ImageIcon bgIcon;
+        if (bgUrl != null) {
+            bgIcon = new ImageIcon(bgUrl);
+        } else {
+            System.out.println("⚠️ Background image not found. Using fallback.");
+            bgIcon = new ImageIcon(new BufferedImage(1000, 700, BufferedImage.TYPE_INT_RGB));
+        }
+        JLabel background = new JLabel(bgIcon);
+        background.setLayout(new BorderLayout());
+        setContentPane(background);
 
         applyRoleRestrictions();
 
