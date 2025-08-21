@@ -79,3 +79,15 @@ cd University-Management-System
 
 # Switch to the security-patches branch
 git checkout security-patches
+```
+UMS before (main branch):
+https://github.com/user-attachments/assets/cac0f6d6-8f28-4a4b-8355-8671d95424df
+
+UMS after (security-patches branch):
+https://github.com/user-attachments/assets/235e3c55-b663-448e-b17a-53c30d3272fc
+
+Hashed passwords stored in database:
+![WhatsApp Image 2025-08-21 at 22 14 17_7a79abfb](https://github.com/user-attachments/assets/d4ce9b9f-176c-47e5-882a-e25171d8ea1d)
+
+Specific roles in database:
+![WhatsApp Image 2025-08-21 at 22 14 43_89c9e45a](https://github.com/user-attachments/assets/dee6c04e-b503-4b59-bcdb-cd25b308828e)
