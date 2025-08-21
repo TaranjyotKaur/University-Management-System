@@ -1,36 +1,81 @@
-🎓 University Management System
+University Management System
 
-A Java-based University Management System with secure login functionality for Admin, Teacher and Student roles.  
-This project integrates MySQL for data persistence and uses BCrypt for secure password hashing.
-
----
-
- Features
-- Secure Login System with BCrypt password hashing  
-- Role-based authentication: Admin Teacher Student  
-- Login attempt limit (max 5 tries, then account locks)  
-- Centralized database with MySQL  
-- GUI-based (Swing) login and management panels  
+This repository contains two versions of the **University Management System** project:
 
 ---
 
-Technologies Used
-- Java 17+  
-- Swing (GUI)  
-- MySQL 8+  
-- JDBC (database connectivity)  
-- BCrypt (password hashing via `jBCrypt` library)  
+## 📌 Branches
+
+### 1. `main` branch
+- Contains the **original project** without security updates.
+- Use this branch if you want the base version of the system.
+
+### 2. `security-patches` branch
+- Contains the **updated project with security improvements**.
+- Use this branch if you want the enhanced and patched version.
 
 ---
 
- Setup Instructions
+## 🔒 Security Updates in `security-patches`
 
- 1. Clone the Repository
+The following changes have been implemented to strengthen the project against common vulnerabilities:
+
+1. **Password Security**
+   - Plain-text passwords replaced with **hashed passwords** using a secure hashing algorithm.
+   - Added password salting to improve resistance against brute-force and rainbow table attacks.
+
+2. **SQL Injection Prevention**
+   - All database queries now use **prepared statements** instead of string concatenation.
+   - User inputs are properly parameterized to block SQL injection attempts.
+
+3. **Input Validation**
+   - Added strict validation and sanitization of user inputs.
+   - Prevents malicious inputs such as script injection and invalid data.
+
+4. **Improved Error Handling**
+   - Removed exposure of sensitive database/system errors to the end user.
+   - Added user-friendly error messages while logging technical details securely.
+
+5. **Secure Session Management**
+   - Implemented proper session handling.
+   - Reduced risks of **session fixation** and **unauthorized access**.
+
+6. **Project Structure Updates**
+   - Updated file organization for better maintainability.
+   - Added comments to highlight secure coding practices.
+
+---
+
+## 📊 Before vs After (Old Project vs Security-Patched Project)
+
+| Feature / Concern         | `main` (Old Project)                            | `security-patches` (Updated Project)                  |
+|----------------------------|------------------------------------------------|------------------------------------------------------|
+| **Password Storage**       | Plain text in database                         | Hashed + Salted using secure algorithms              |
+| **Database Queries**       | String concatenation (vulnerable to SQLi)      | Prepared statements with parameterized queries       |
+| **Input Validation**       | Minimal / none                                 | Strict validation & sanitization applied             |
+| **Error Handling**         | Exposes raw database/system errors             | User-friendly messages, secure error logging         |
+| **Session Management**     | Basic / default                                | Hardened session handling, prevents fixation attacks |
+| **Security Awareness**     | No security best practices                     | Secure coding guidelines & comments included         |
+
+---
+
+## 🔽 How to Download the Updated Project
+
+### Option 1: Download as ZIP
+1. Click on the branch dropdown at the top-left (it shows `main` by default).
+2. Select **`security-patches`**.
+3. Click the green **Code** button.
+4. Select **Download ZIP** and extract it on your system.
+
+### Option 2: Clone via Git
+If you have Git installed, run:
+
 ```bash
-git clone https://github.com/your-username/university-management-system.git
-cd university-management-system 
-```
+# Clone the repo
+git clone https://github.com/<your-username>/University-Management-System.git
 
-2. Database Setup
+# Navigate into the repo
+cd University-Management-System
 
-Create the database by using the steps from the file Back End Commands.txt
+# Switch to the security-patches branch
+git checkout security-patches
